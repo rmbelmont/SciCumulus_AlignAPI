@@ -1,0 +1,3 @@
+
+D:\alignapi\exp\act1\0>java -jar D:\alignapi\bin\alignapi\alignapi.jar D:\alignapi\exp\Entrada.dataset  
+Alinhamento concluído com Sucesso!

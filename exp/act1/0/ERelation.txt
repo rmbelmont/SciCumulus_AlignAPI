@@ -1,0 +1,2 @@
+ID;Origem;Destino;path;pathSaida
+0;cmt;conference;file:D:/alignapi/bin/ontologias/;D:\alignapi\exp\saida\\\\
