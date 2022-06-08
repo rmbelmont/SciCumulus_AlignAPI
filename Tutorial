@@ -1,0 +1,18 @@
+Tutorial sobre Alignment API com uso de Wokflow Científico – SciCumulus
+
+O SciCumulus (SCC) é um sistema de gerenciamento de fluxo de trabalho científico paralelo, que permite modelagem, execução e análise de fluxo de trabalho científico. 
+O SCC foi desenvolvido para suportar a execução paralela em ambientes de computação de alto desempenho (HPC).
+
+O SCC suporta a execução de dados paralelos de acordo com uma especificação de fluxo de trabalho. O SCC pode reunir e consultar dados de proveniência durante a 
+execução do fluxo de trabalho. Os dados de entrada (representados por uma relação) são fragmentados para permitir a varredura de parâmetros em ambientes HPC. 
+O processamento paralelo do SCC segue o estilo MapReduce (por exemplo, Hadoop). No entanto, o SCC implementa sua própria abordagem algébrica que pode executar 
+otimização, agendamento dinâmico e orientação do fluxo de trabalho.
+
+O banco de dados de proveniência do SCC permite que os usuários sejam capazes de analisar dados específicos do domínio, dados de desempenho e transformações de 
+dados envolvidos durante a execução do fluxo de trabalho. O SCC usa o PostgreSQL para gerenciar o banco de dados de proveniência.
+
+Fonte: https://scicumulusc2.wordpress.com/. Acesso em: 04/07/2020.
+
+
+Tutorial sobre Alignment API com uso de Wokflow Científico – SciCumulus
+Link: https://robertomdias.wordpress.com/2020/07/03/tutorial-sobre-alignment-api-com-uso-de-wokflow-scicumulus/
