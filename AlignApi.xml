@@ -1,0 +1,29 @@
+<SciCumulus>
+	<environment type="LOCAL"/>
+	<constraint workflow_exectag="alignapi_execution_00004" cores="3"/>
+	<workspace workflow_dir="D:/alignapi"/>
+	<database name="scicumulus" username="postgres" password="2502" port="5432" server="localhost"/>
+	<conceptualWorkflow tag="alignApi" description="Align Api - Alinhamento de Ontologias">	
+		 <activity tag="act1" description="Align Api - Alinhamento de Ontologias" type="MAP" activation="%=WFDIR%/exp/alinhamento/1/execucao_1.cmd  D:\alignapi\exp\Entrada.dataset">	
+			<relation reltype="Input" name="alignApi"/>
+			<relation reltype="Output" name="alignApioutput_1" />
+			<field name="ID" type="float" input="alignApi" output="alignApioutput_1" decimalplaces="0"/>
+			<field name="Origem" type="text"  input="alignApi" output="alignApioutput_1"/>
+		        <field name="Destino" type="text"  input="alignApi" output="alignApioutput_1"/>
+		        <field name="path" type="text"  input="alignApi" output="alignApioutput_1"/>
+                	<field name="pathSaida" type="text"  input="alignApi" output="alignApioutput_1"/>
+		 </activity>
+           <activity tag="act2" description="Align Api - Avaliação de Ontologias" type="MAP" activation="%=WFDIR%/exp/avaliacao/1/execucao_1.cmd  D:\alignapi\exp\Saida.dataset">	
+			<relation reltype="Input" dependency="act1"/>
+			<relation reltype="Output" name="alignApioutput_2" />
+			<field name="ID" type="float"  output="alignApioutput_2" decimalplaces="0"/>
+			<field name="Origem" type="text"  output="alignApioutput_2"/>
+		        <field name="Destino" type="text"  output="alignApioutput_2"/>
+		        <field name="path" type="text"  output="alignApioutput_2"/>
+                	<field name="pathSaida" type="text"  output="alignApioutput_2"/>
+		 </activity>
+	 </conceptualWorkflow>
+	<executionWorkflow tag="alignApi" execmodel="DYN_FAF" expdir="%=WFDIR%/exp" max_failure="5" user_interaction="false" redundancy="false" reliability="0.1">
+		<relation name="alignApi" filename="Entrada.dataset"/>
+	</executionWorkflow>		
+</SciCumulus>
